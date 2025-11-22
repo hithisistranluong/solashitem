@@ -3,10 +3,14 @@
 import Image from 'next/image';
 
 export interface Project {
+  id?: string;
   title: string;
   description: string;
   tech: string[];
   categories?: ('astronomy' | 'math' | 'physics')[];
+  image_url?: string;
+  demo_url?: string;
+  repo_url?: string;
 }
 
 interface ProjectCardProps {
