@@ -36,7 +36,7 @@ export default function Home() {
         </section>
 
         {/* About */}
-        <Section id="about" title="About Me" accent="1" band="dark">
+        <Section id="about" title="About Me" band="dark">
           <div className="max-w-3xl mx-auto">
             <p className="text-lg text-gray-300 mb-6 text-justify">
               Hello! I&apos;m Tran Luong, an aspiring AI and data science practitioner with a 
@@ -52,7 +52,7 @@ export default function Home() {
         </Section>
 
         {/* Skills */}
-        <Section id="skills" title="Skills & Technologies" accent="2" band="blue">
+        <Section id="skills" title="Skills & Technologies" band="blue">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {[
               'Git', 'Python', 'Java',
@@ -71,7 +71,7 @@ export default function Home() {
         </Section>
 
         {/* Projects */}
-        <Section id="projects" title="Featured Projects" accent="3" band="dark">          
+        <Section id="projects" title="Featured Projects" band="dark">          
           <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
             Explore my work in AI, data science, and web development
           </p>
@@ -80,7 +80,7 @@ export default function Home() {
         </Section>
 
         {/* Contact */}
-        <Section id="contact" title="Get In Touch" accent="4" band="blue">
+        <Section id="contact" title="Get In Touch" band="blue">
           <div className="max-w-2xl mx-auto">
             <p className="text-center text-lg text-gray-300 mb-8">
               I&apos;m always open to new opportunities and collaborations. 
@@ -127,7 +127,7 @@ export default function Home() {
         </Section>
 
         {/* Footer */}
-        <footer className="border-t border-[var(--color-primary)]/20 py-6 relative universe-band--dark">
+        <footer className="border-t border-[var(--astro-cosmic-cyan))]/30 py-6 relative universe-band--dark">
           <div 
             className="section-panel absolute inset-0 pointer-events-none"
             aria-hidden="true"
