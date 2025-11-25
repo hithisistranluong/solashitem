@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import useSWR from 'swr';
 import ProjectCard, { Project } from './ProjectCard';
 
@@ -8,7 +8,16 @@ import ProjectCard, { Project } from './ProjectCard';
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 export default function ProjectsSection() {
-  const [filter, setFilter] = useState<'all' | 'astronomy' | 'math' | 'physics'>('all');
+  const [filter, setFilter] = useState<'all' | 'AI' | 'DS' | 'Web'>('all');
+
+  const [maxWidth, setMaxWidth] = useState(0);
+  const refs = useRef<HTMLButtonElement[]>([]);
+
+  // Calculate max button width after render
+  useEffect(() => {
+    const widths = refs.current.map(btn => btn?.offsetWidth || 0);
+    setMaxWidth(Math.max(...widths));
+  }, []);
 
   // Fetch projects from API with SWR
   const { data: response, error, isLoading } = useSWR(
@@ -26,18 +35,24 @@ export default function ProjectsSection() {
     <>
       {/* Filter Buttons */}
       <div className="flex justify-center gap-3 mb-12 flex-wrap">
-        {(['all', 'astronomy', 'math', 'physics'] as const).map((category) => (
+        {(['all', 'AI', 'DS', 'Web'] as const).map((category, index) => (
           <button
             key={category}
+            ref={(el) => {if (el) refs.current[index] = el;}}
             onClick={() => setFilter(category)}
             className={`px-6 py-2 rounded-full font-semibold transition-all cursor-pointer border ${
               filter === category
                 ? 'bg-blue-900/30 border-[rgba(0,217,255,0.8)] text-white'
                 : 'bg-white/10 text-gray-300 border-white/20 hover:bg-white/20'
             }`}
-            style={filter === category ? { boxShadow: 'var(--shadow-glow-cyan)' } : {}}
+            style={{
+              width: maxWidth || undefined,
+              boxShadow: filter === category ? 'var(--shadow-glow-cyan)' : undefined,
+            }}
           >
-            {category === 'all' ? 'All Projects' : category.charAt(0).toUpperCase() + category.slice(1)}
+            {category === 'all'
+              ? 'All Projects'
+              : category.charAt(0).toUpperCase() + category.slice(1)}
           </button>
         ))}
       </div>

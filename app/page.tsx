@@ -73,7 +73,7 @@ export default function Home() {
         {/* Projects */}
         <Section id="projects" title="Featured Projects" band="dark">          
           <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
-            Explore my work in AI, data science, and web development
+            Explore my works in AI, Data Science, and Web Development
           </p>
           
           <ProjectsSection />
