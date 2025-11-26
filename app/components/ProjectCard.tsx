@@ -7,7 +7,7 @@ export interface Project {
   title: string;
   description: string;
   tech: string[];
-  categories?: ('astronomy' | 'math' | 'physics')[];
+  categories?: ('AI' | 'DS' | 'Web')[];
   image_url?: string;
   demo_url?: string;
   repo_url?: string;

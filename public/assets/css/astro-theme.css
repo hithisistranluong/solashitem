@@ -289,19 +289,19 @@ body.astro-theme {
   transition: all var(--transition-fast);
 }
 
-.category-tag.astronomy {
+.category-tag.AI {
   background: rgba(0, 217, 255, 0.2);
   color: var(--astro-cosmic-cyan);
   border: 1px solid var(--astro-cosmic-cyan);
 }
 
-.category-tag.math {
+.category-tag.DS {
   background: rgba(255, 215, 0, 0.2);
   color: var(--astro-solar-gold);
   border: 1px solid var(--astro-solar-gold);
 }
 
-.category-tag.physics {
+.category-tag.Web {
   background: rgba(255, 0, 255, 0.2);
   color: var(--astro-orbital-magenta);
   border: 1px solid var(--astro-orbital-magenta);
