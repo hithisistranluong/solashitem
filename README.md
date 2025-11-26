@@ -29,18 +29,18 @@ Tran Luong's personal portfolio website built with Next.js, featuring an astro-s
 - **Primary Colors**  
   --color-primary: var(--astro-cosmic-cyan); &emsp; #00d9ff  
   --color-secondary: var(--astro-solar-gold); &emsp; #ffd700  
-  --color-accent: var(--astro-orbital-magenta); &emsp; #ff00ff  
+  --color-accent: var(--astro-orbital-magenta); &emsp; #ff00ff
 
 - **Background Colors**  
   --color-background: var(--astro-void-black); &emsp; #020814  
-  --color-background-alt: var(--astro-deep-space); &emsp; #0a0e27  
+  --color-background-alt: var(--astro-deep-space); &emsp; #0a0e27
 
 ### Starfield Configuration
 
-  - StarCount: 250.
-  - Twinkle: true.
-  - MouseParallax: true.
-  - ScrollParallax: true.
+- **StarCount**: 250.
+- **Twinkle**: true.
+- **MouseParallax**: true.
+- **ScrollParallax**: true.
 
 ### Orbital Mechanics and Tuning
 
@@ -72,10 +72,10 @@ The `data-radius` attribute is automatically set on each orbit element, which th
 
 ### Project Categories
 
-- Title: 'Project Name'.
-- Description: 'Project description'.
-- Tech: 'Tech1', 'Tech2'.
-- Categories: 'AI', 'DS', 'Web'.
+- **Title**: 'Project Name'.
+- **Description**: 'Project description'.
+- **Tech**: 'Tech1', 'Tech2'.
+- **Categories**: 'AI', 'DS', 'Web'.
 
 ### Alternating Section Gradient Bands
 
@@ -85,15 +85,12 @@ The portfolio features alternating blue and dark gradient bands across sections 
 
 Sections automatically alternate between blue and dark gradient tints:
 
-- **Blue tone**:
-  - **Hero**.
-  - **Skills & Technologies**.
-  - **Get In Touch**.
-
-- **Dark (black) tone**:
-  - **About Me**.
-  - **Featured Projects**.
-  - **Footer**.
+- **Hero**: Blue tone
+- **About Me**: Dark (black) tone
+- **Skills & Technologies**: Blue tone
+- **Featured Projects**: Dark (black) tone
+- **Get In Touch**: Blue tone
+- **Footer**: Dark (black) tone
 
 #### Gradient Styles
 
